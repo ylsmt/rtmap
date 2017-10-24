@@ -1,3 +1,13 @@
 # Python
 *.pyc
+migrations
+scripts
+
+# DB
+db.sqlite3
+
+# log
+log
+
+
 
