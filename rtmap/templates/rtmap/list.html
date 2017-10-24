@@ -1,0 +1,21 @@
+{% if router_list %}
+    <table>
+        <thead>
+            <tr></th><th>IP地址</th><th>SSID</th><th>Wifi密码</th><th width="200">地址</th><th width="80">运营商</th><th width="180">扫描时间</th></tr>
+        </thead>
+    {% for r in router_list %} 
+        <tr>
+            <td><a href="/rtmap/{{ r.id }}"> {{ r.ip}} </a><td>
+            <td>{{ r.ssid }}<td>
+            <td>{{ r.passwd }}<td>
+            <td>{{ r.address }}<td>
+            <td>{{ r.isp }}<td>
+            <td>{{ r.createtime }}<td>
+        </tr>
+    {% endfor %}
+    </table>
+
+{% else %}
+    <p>no data</p>
+
+{% endif %}
